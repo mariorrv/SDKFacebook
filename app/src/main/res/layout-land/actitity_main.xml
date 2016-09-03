@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="org.example.sdkfacebook.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001973" >
+
+    <com.google.android.gms.ads.AdView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/ad_view"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/id_banner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </com.google.android.gms.ads.AdView>
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp">
+    </com.facebook.login.widget.LoginButton>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fb_image"
+        android:src="@drawable/facebook_creatures"
+        android:layout_below="@+id/btn_logout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logout_button"
+        android:text="Facebook Log Out"
+        android:id="@+id/btn_logout"
+        android:elevation="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal"
+        android:layout_below="@+id/btn_logout"
+        android:layout_toRightOf="@+id/fb_image"
+        android:layout_toEndOf="@+id/fb_image"
+        android:layout_alignBottom="@+id/fb_image">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txt_userinfo"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/fb_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/ad_view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
